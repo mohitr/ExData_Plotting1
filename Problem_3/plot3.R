@@ -1,5 +1,9 @@
-# reading complete data
-complete_data <- read.csv("household_power_consumption.txt", header = TRUE, sep=";", comment.char="", na.string="?")
+# downloading data
+url="https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"
+file="household_power_consumption.txt"
+temp_file= "/tmp/a.zip"
+download.file(url, destfile=temp_file, method="curl")
+complete_data <- read.table(unz(temp_file, file), header=TRUE, sep=";", na.string="?", comment.char="")
 
 # filtering out only first 2 days of feb
 reduced_set <- subset(complete_data, Date=='1/2/2007' | Date=='2/2/2007')
