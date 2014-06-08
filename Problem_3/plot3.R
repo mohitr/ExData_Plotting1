@@ -19,10 +19,10 @@ par(new=T)
 plot(reduced_set$ts,  reduced_set$Sub_metering_3, ylim=c(0,30), type="l", col="blue", xlab="", ylab="")
 
 # adding legend now
-legend( "topright", legend=c("Sub_metering_1", "Sub_metering_2","Sub_metering_3"), col=c("black", "red", "blue"), lwd=1)
+legend( "topright", legend=c("Sub_metering_1", "Sub_metering_2","Sub_metering_3"), col=c("black", "red", "blue"), lwd=1, cex=.7)
 
-# copy plot to pdf
-dev.copy2pdf(file="plot3.pdf", out.type="pdf")
+# copy plot to png
+dev.copy(png, "plot3.png", width=480, height=480)
 
 # close
 dev.off()

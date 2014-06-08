@@ -31,8 +31,8 @@ legend( "topright", legend=c("Sub_metering_1", "Sub_metering_2","Sub_metering_3"
 # 4th graph
 plot(reduced_set$ts, reduced_set$Global_reactive_power, type="l", xlab="datetime", ylab="Global_reactive_power")
 
-# copy plot to pdf
-dev.copy2pdf(file="plot4.pdf", out.type="pdf")
+# copy plot to png
+dev.copy(png, "plot4.png", width=480, height=480)
 
 # close
 dev.off()

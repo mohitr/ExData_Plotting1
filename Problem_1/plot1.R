@@ -7,8 +7,8 @@ reduced_set <- subset(complete_data, Date=='1/2/2007' | Date=='2/2/2007')
 # plot histogram with relevant labels
 hist(reduced_set$Global_active_power, col="red", main = "Global Active Power", xlab="Global Active Power (kilowatts)", ylab="Frequency")
 
-# copy plot to pdf
-dev.copy2pdf(file="plot1.pdf", out.type="pdf")
+# copy plot to png
+dev.copy(png, "plot1.png", width=480, height=480)
 
 # close
 dev.off()

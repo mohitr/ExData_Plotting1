@@ -10,8 +10,8 @@ reduced_set$ts <- strptime(paste(reduced_set$Date, reduced_set$Time), "%d/%m/%Y 
 # plot the graph
 plot(reduced_set$ts, reduced_set$Global_active_power, type="l", xlab="", ylab="Global Active Power (kilowatts)")
 
-# copy plot to pdf
-dev.copy2pdf(file="plot2.pdf", out.type="pdf")
+# copy plot to png
+dev.copy(png, "plot2.png", width=480, height=480)
 
 # close
 dev.off()
